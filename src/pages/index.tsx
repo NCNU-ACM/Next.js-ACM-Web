@@ -1,26 +1,31 @@
+
 import { Inter } from "next/font/google";
 import * as React from "react";
 import Link from "next/link";
-
+import {useState, useEffect} from 'react'
 import { Navbar } from "@/component/navbar";
-import { Advertise } from "@/component/advertise";
-import { Webbuttons } from "@/component/web_buttons";
-import { House } from "@/component/houserecom";
-import { News } from "@/component/news";
+import {Photos} from "@/component/photo";
+import { Activity } from "@/component/activity";
+import { Resource } from "@/component/resource";
 import {Contact} from "@/component/contact";
-
+import {Future} from "@/component/future";
+ 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+      setMounted(true)
+  }, [])
   return (
+    mounted &&
     <>
-      <Advertise /> 
       <Navbar />
-      <Webbuttons />
-      <House />
-      <News/>
-      <Contact/>
-
+      <Photos />
+      <Resource />
+      <Activity />
+      <Future />
+      <Contact />
     </>
   );
 }

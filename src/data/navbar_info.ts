@@ -1,5 +1,5 @@
 
-export interface Settings {
+export interface Groups {
     title: string,
     href: string,
     description: string
@@ -11,34 +11,40 @@ export interface Remind{
     description:string
 }
 
-export const settings:Settings[] = [
+export const groups:Groups[] = [
     {
-      title: "租售物件推播",
-      href: "/docs/primitives/alert-dialog",
+      title: "Web小組",
+      href: "https://hackmd.io/@ziling/rJ6JXUnw3",
       description:
         "",
     },
     {
-      title: "業界新聞通知",
-      href: "/docs/primitives/alert-dialog",
+      title: "Server小組",
+      href: "https://hackmd.io/@ncuyvonne/rkyqsmokp",
       description:
         "",
     },
     {
-      title: "目前版本",
-      href: "/docs/primitives/alert-dialog",
+      title: "競賽小組",
+      href: "https://hackmd.io/@Yukino9126/rJ28f6ju3",
       description:
         "",
     },
     {
-      title: "清除快取",
-      href: "/docs/primitives/alert-dialog",
+      title: "接案小組",
+      href: "",
       description:
         "",
     },
     {
-      title: "隱私權條款",
-      href: "/docs/primitives/alert-dialog",
+      title: "國際學術組",
+      href: "https://hackmd.io/@y2GeMbPES_WkICCe9gma9w/SJVybzXLh",
+      description:
+        "",
+    },
+    {
+      title: "網路技術小組",
+      href: "https://hackmd.io/4-bjiy_KTGSd4AoxNimObA?view",
       description:
         "",
     },

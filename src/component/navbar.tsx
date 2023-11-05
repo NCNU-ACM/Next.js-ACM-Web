@@ -2,11 +2,10 @@ import { Inter } from "next/font/google";
 import Link from "next/link";
 import * as React from "react";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
+import {useState, useEffect} from 'react'
 import { cn } from "@/lib/utils";
-import { reminds, settings } from "../data/navbar_info";
-import { GiFamilyHouse } from "react-icons/gi";
+import { GlobeIcon, UsersIcon } from "lucide-react";
+import { groups } from "../data/navbar_info";
 
 import {
   NavigationMenu,
@@ -17,77 +16,43 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 
-import {
-  BellIcon,
-  CalendarDaysIcon,
-  CrownIcon,
-  HomeIcon,
-  PiggyBankIcon,
-  SettingsIcon,
-} from "lucide-react";
-
+interface NavbarProps {}
+import Image from "next/image";
+import logo from "../../public/logo.ico";
 const inter = Inter({ subsets: ["latin"] });
 
-export function Navbar() {
+export function Navbar(NavbarProps:NavbarProps) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+      setMounted(true)
+  }, [])
   return (
+    mounted &&
     <>
-      <header className="fixed top-0 border-2 bg-white">
+    <time dateTime="2023-11-5" suppressHydrationWarning />
+      <header className="fixed top-0 border-2 bg-white z-50">
         <div className="md:flex w-screen h-14 p-6 items-center justify-between">
           <div className="space-x-4 md:flex">
             <Link href="/">
               <div className="space-x-1 flex items-center">
-                <GiFamilyHouse size={35} />
+                <Image src={logo} alt="logo" width={60}></Image>
                 <h1 className="serif text-2xl font-bold">
-                  <span className="text-lime-600">台</span>
-                  <span className="text-blue-400">灣</span>房
-                  <span className="text-yellow-600">地</span>
-                  <span className="text-red-500">網</span>
+                  NCNU ACM
                 </h1>
               </div>
             </Link>
-            <div className="md:flex space-x-1">
-              <Badge variant="outline" className="text-sm">
-                <CrownIcon className="w-5 pr-1 " />
-                一般會員 Level 0
-              </Badge>
-              <Badge variant="outline" className="text-sm pl-[20px] pr-[30px]">
-                <PiggyBankIcon className="w-6 pr-1" />
-                會員積分 0
-              </Badge>
-            </div>
           </div>
-          <div className="md:flex items-center">
-            <NavigationMenu className="">
+          
+            <NavigationMenu className="mr-[150px]">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>
-                    <BellIcon className="pr-1" />
-                    <h2>通知</h2>
+                    <GlobeIcon className="pr-1" />
+                    <h2>小組活動</h2>
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid p-3 md:w-[400px] lg:grid-cols-[.75fr_1fr]">
-                      {reminds.map((component) => (
-                        // {<component.icon className="mr-1 w-5 h-5"/>}
-                        <ListItem
-                          key={component.title}
-                          title={component.title}
-                          href={component.href}
-                        >
-                          {component.description}
-                        </ListItem>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger>
-                    <SettingsIcon className="pr-1" />
-                    <h2>系統設定</h2>
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid p-3 md:w-[400px] lg:grid-cols-[.75fr_1fr]">
-                      {settings.map((component) => (
+                    <ul className="grid p-3 md:w-[300px] lg:grid-cols-[.75fr_1fr]">
+                      {groups.map((component) => (
                         // {<component.icon className="mr-1 w-5 h-5"/>}
                         <ListItem
                           key={component.title}
@@ -102,15 +67,9 @@ export function Navbar() {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
-            <Link href="/" className="md:flex items-center mr-3 pl-2">
-              <CalendarDaysIcon className="pr-1" />
-              <p className="text-sm font-medium">我的行程</p>
-            </Link>
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback />
-            </Avatar>
-          </div>
+            
+           
+        
         </div>
       </header>
     </>

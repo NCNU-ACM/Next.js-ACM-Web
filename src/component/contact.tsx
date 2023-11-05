@@ -6,8 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+interface Props {}
 
-export function Contact() {
+export function Contact(Props:Props) {
   return (
     <>
       <Card className="w-screen h-[200px] bg-cyan-950">
