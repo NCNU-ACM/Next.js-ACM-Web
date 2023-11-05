@@ -7,7 +7,7 @@ import { Navbar } from "@/component/navbar";
 import {Photos} from "@/component/photo";
 import { Activity } from "@/component/activity";
 import { Resource } from "@/component/resource";
-import {Contact} from "@/component/contact";
+import {Announce} from "@/component/announce";
 import {Future} from "@/component/future";
  
 const inter = Inter({ subsets: ["latin"] });
@@ -22,10 +22,11 @@ export default function Home() {
     <>
       <Navbar />
       <Photos />
+      <Announce />
       <Resource />
       <Activity />
       <Future />
-      <Contact />
+      
     </>
   );
 }

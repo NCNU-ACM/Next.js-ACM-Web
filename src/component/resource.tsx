@@ -33,6 +33,7 @@ const resources = [
 ];
 interface Props {}
 export function Resource(Props: Props) {
+  
   return (
     <div id="root">
       <div className="flex justify-between border-b-2 mt-4 pl-3">
