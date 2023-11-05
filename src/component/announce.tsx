@@ -21,7 +21,7 @@ interface Props {}
 const announce = [
   {
     people: "Web master",
-    say: "我有幫新加入的成員在我們的ACM server (acm1.ipv6.club.tw) 建立帳號了！這台server是專屬我們ACM會員才可以使用的！",
+    say: "我有幫新加入的成員在我們的ACM1建立帳號了！這台server是專屬我們ACM會員才可以使用的！",
   },
   {
     people: "Web master",
@@ -49,7 +49,7 @@ const announce = [
   },
   {
     people:"Server小組的陳郁芳",
-    say:"已經將新加入的成員在我們的ACM2 (acm2.ipv6.club.tw) 建立帳號~"
+    say:"已經將新加入的成員在我們的ACM2建立帳號~"
   },
 ];
 export function Announce(Props: Props) {
