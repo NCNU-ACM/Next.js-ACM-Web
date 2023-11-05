@@ -33,7 +33,7 @@ const activities = [
   {
     time: "2023/7/16~7/18",
     title: "新竹女中Flask營隊",
-    link: "https://hackmd.io/@elliefish/r1MGMj793",
+    link: "https://hackmd.io/@y2GeMbPES_WkICCe9gma9w/HkwQQwXp3",
   },
   {
     time: "2023/6/16",
@@ -98,7 +98,7 @@ export function Activity(Props: Props) {
                 <TableRow key={item.title}>
                   <div className="flex items-center space-x-[200px]">
                     <Link href={item.link}>
-                      <TableCell className="flex items-center font-medium p-0">
+                      <TableCell className="flex items-center font-medium p-0 w-[130px]">
                         <BiTime />
                         <div className="pl-2">{item.time}</div>
                       </TableCell>

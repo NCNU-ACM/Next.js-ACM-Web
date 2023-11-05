@@ -58,7 +58,7 @@ export function Resource(Props: Props) {
                 <TableRow key={item.title}>
                   <div className="flex items-center space-x-[200px]">
                     <Link href={item.link}>
-                      <TableCell className="flex items-center font-medium p-0 ">
+                      <TableCell className="flex items-center font-medium p-0 w-[100px]">
                         <BiTime />
                         <div className="pl-2">{item.time}</div>
                       </TableCell>
