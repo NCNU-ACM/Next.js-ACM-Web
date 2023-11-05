@@ -55,14 +55,14 @@ const announce = [
 export function Announce(Props: Props) {
   return (
     <>
-      <Card className="w-screen h-[200px] bg-orange-100 border-spacing-1">
+      <Card className="w-screen h-[400px] bg-orange-100 border-spacing-1">
         <CardHeader>
           <CardTitle className="text-orange-950">ACM公告</CardTitle>
         </CardHeader>
         <CardContent>
           <Table>
             <TableBody>
-              <ScrollArea className="h-[100px] pl-3">
+              <ScrollArea className="h-[300px] pl-3">
                 {announce.map((item) => (
                   <TableRow key={item.say}>
                     <div className="flex items-center space-x-[100px]">
