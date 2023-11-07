@@ -33,7 +33,7 @@ const activities = [
   {
     time: "2023/7/16~7/18",
     title: "新竹女中Flask營隊",
-    link: "https://hackmd.io/@y2GeMbPES_WkICCe9gma9w/HkwQQwXp3",
+    link: "https://hackmd.io/@elliefish/r1MGMj793",
   },
   {
     time: "2023/6/16",
