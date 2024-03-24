@@ -39,7 +39,7 @@ export function Resource(Props: Props) {
       <div className="flex justify-between border-b-2 mt-4 pl-3">
         <div className="flex items-center p-2">
           <PenSquareIcon size={30} color="#06b6d4" />
-          <h2 className="pl-2">ACM資源:-)</h2>
+          <h2 className="pl-2">ACM資源</h2>
         </div>
       </div>
       <div>
