@@ -26,6 +26,7 @@
     "@radix-ui/react-tooltip": "^1.0.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
+    "express": "^4.19.2",
     "eye": "^0.0.3",
     "install": "^0.13.0",
     "lucide-react": "^0.284.0",
