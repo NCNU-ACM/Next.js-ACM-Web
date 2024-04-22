@@ -58,6 +58,8 @@ export function Navbar(NavbarProps:NavbarProps) {
                           key={component.title}
                           title={component.title}
                           href={component.href}
+                          GroupName={component.GroupName}
+                          passWD={component.passWD}
                         >
                           {component.description}
                         </ListItem>
@@ -76,51 +78,28 @@ export function Navbar(NavbarProps:NavbarProps) {
   );
 }
 
-const name_table: { [key: string]: string } = {
-  'Server小組': 'server',
-  'Web小組': 'web',
-  '國際學術組': 'international',
-  '網路技術小組': 'internet',
-  '競賽小組': 'contest',
-  '接案小組': 'project'
-};
-
-var passWD_table = {
-  server:'1111',
-  web:'2222',
-  international:'3333',
-  internet:'4444',
-  contest:'5555',
-  project:'6666'
-};
-
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<"a">& { GroupName: string; passWD: string; } //flag
+>(({ className, title, children, GroupName, passWD, ...props }, ref) => {
     const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
       event.preventDefault(); // 阻止默認行為，即頁面跳轉
       var myGroup = window.prompt('請輸入小組名稱');
-      if(
-        myGroup == '' || myGroup === null){
+      if( myGroup == '' || myGroup === null){
         alert('沒輸入小組名稱，請重新輸入!');
         return;
-        }
+      }
       var myPassWD = window.prompt('請輸入密碼');
-      if (
-        myPassWD == '' ||  myPassWD === null
-      ) {
+      if ( myPassWD == '' ||  myPassWD === null ) {
         alert('沒輸入密碼，請重新輸入!');
         return;
       }
       // 檢查帳號和密碼是否正確，這部分你需要根據你的邏輯來實現
-      if(title === undefined || name_table[title] === undefined || name_table[title] != myGroup){
+      if(GroupName != myGroup){
         alert('帳號錯誤！');
         return;
       }
-      if (
-        passWD_table[name_table[title] as keyof typeof passWD_table] === myPassWD
-      ) {
+      if ( passWD === myPassWD ) {
         // 在這裡添加你想要執行的其他操作，比如彈出提示框等等
         alert('登入成功，即將跳轉頁面');
         window.location.href = props.href!;//! 來進行非空斷言

@@ -2,7 +2,9 @@
 export interface Groups {
     title: string,
     href: string,
-    description: string
+    description: string,
+    GroupName: string,
+    passWD: string
 }
 
 export interface Remind{
@@ -17,36 +19,48 @@ export const groups:Groups[] = [
       href: "https://hackmd.io/@ziling/rJ6JXUnw3",
       description:
         "",
+      GroupName: 'web',
+      passWD: '1111'
     },
     {
-      title: "Server小組",
-      href: "https://hackmd.io/@ncuyvonne/rkyqsmokp",
+      title: "系統網路小組",
+      href: "https://hackmd.io/@ncuyvonne/ServerAndNetwork",
       description:
         "",
+        GroupName: 'server_network',
+        passWD: 'chmodg+rNCNU'
     },
     {
       title: "競賽小組",
       href: "https://hackmd.io/@Yukino9126/rJ28f6ju3",
       description:
         "",
+        GroupName: 'contest',
+        passWD: '3333'
     },
     {
       title: "接案小組",
       href: "",
       description:
         "",
+        GroupName: 'project',
+        passWD: '4444'
     },
     {
       title: "國際學術組",
       href: "https://hackmd.io/@y2GeMbPES_WkICCe9gma9w/SJVybzXLh",
       description:
         "",
+        GroupName: 'international',
+        passWD: '5555'
     },
     {
       title: "網路技術小組",
       href: "https://hackmd.io/4-bjiy_KTGSd4AoxNimObA?view",
       description:
         "",
+        GroupName: 'internat',
+        passWD: '6666'
     },
   ];
   export const reminds:Remind[] = [
