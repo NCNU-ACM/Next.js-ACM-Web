@@ -76,6 +76,15 @@ export function Navbar(NavbarProps:NavbarProps) {
   );
 }
 
+const name_table: { [key: string]: string } = {
+  'Server小組': 'server',
+  'Web小組': 'web',
+  '國際學術組': 'international',
+  '網路技術小組': 'internet',
+  '競賽小組': 'contest',
+  '接案小組': 'project'
+};
+
 var passWD_table = {
   server:'1111',
   web:'2222',
@@ -91,28 +100,32 @@ const ListItem = React.forwardRef<
 >(({ className, title, children, ...props }, ref) => {
     const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
       event.preventDefault(); // 阻止默認行為，即頁面跳轉
-      var myGroup = window.prompt('請輸入帳號');
+      var myGroup = window.prompt('請輸入小組名稱');
       if(
         myGroup == '' || myGroup === null){
-        alert('請輸入小組名稱!');
+        alert('沒輸入小組名稱，請重新輸入!');
         return;
         }
       var myPassWD = window.prompt('請輸入密碼');
       if (
         myPassWD == '' ||  myPassWD === null
       ) {
-        alert('請輸入密碼!');
+        alert('沒輸入密碼，請重新輸入!');
         return;
       }
       // 檢查帳號和密碼是否正確，這部分你需要根據你的邏輯來實現
+      if(title === undefined || name_table[title] === undefined || name_table[title] != myGroup){
+        alert('帳號錯誤！');
+        return;
+      }
       if (
-        passWD_table[myGroup as keyof typeof passWD_table] === myPassWD
+        passWD_table[name_table[title] as keyof typeof passWD_table] === myPassWD
       ) {
         // 在這裡添加你想要執行的其他操作，比如彈出提示框等等
         alert('登入成功，即將跳轉頁面');
         window.location.href = props.href!;//! 來進行非空斷言
       } else {
-        alert('帳號或密碼錯誤！');
+        alert('密碼錯誤！');
       }
     };
 
