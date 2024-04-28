@@ -52,7 +52,7 @@ export const groups:Groups[] = [
       description:
         "",
         GroupName: 'BGFncnu',
-        passWD: 'Keep_It_up'
+        passWD: 'Keep_It_Up'
     },
   ];
   export const reminds:Remind[] = [
