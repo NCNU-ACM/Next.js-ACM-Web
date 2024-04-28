@@ -94,7 +94,7 @@ const ListItem = React.forwardRef<
         alert('沒輸入密碼，請重新輸入!');
         return;
       }
-      // 檢查帳號和密碼是否正確，這部分你需要根據你的邏輯來實現
+      // 檢查帳號和密碼是否正確，這部分你需要根據你的邏輯來實現!
       if(GroupName != myGroup){
         alert('帳號錯誤！');
         return;
