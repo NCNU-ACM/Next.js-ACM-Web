@@ -52,12 +52,14 @@ export function Navbar(NavbarProps:NavbarProps) {
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid p-3 md:w-[300px] lg:grid-cols-[.75fr_1fr]">
-                      {groups.map((component) => (
+                      { groups.map((component) => (
                         // {<component.icon className="mr-1 w-5 h-5"/>}
                         <ListItem
                           key={component.title}
                           title={component.title}
                           href={component.href}
+                          GroupName={component.GroupName}
+                          passWD={component.passWD}
                         >
                           {component.description}
                         </ListItem>
@@ -78,26 +80,54 @@ export function Navbar(NavbarProps:NavbarProps) {
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-  return (
-    <li>
-      <NavigationMenuLink asChild>
-        <a
-          ref={ref}
-          className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
-          )}
-          {...props}
-        >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
-        </a>
-      </NavigationMenuLink>
-    </li>
-  );
-});
+  React.ComponentPropsWithoutRef<"a">& { GroupName: string; passWD: string; } //flag
+>(({ className, title, children, GroupName, passWD, ...props }, ref) => {
+    const handleClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+      event.preventDefault(); // 阻止默認行為，即頁面跳轉
+      var myGroup = window.prompt('請輸入小組名稱');
+      if( myGroup == '' || myGroup === null){
+        alert('沒輸入小組名稱，請重新輸入!');
+        return;
+      }
+      var myPassWD = window.prompt('請輸入密碼');
+      if ( myPassWD == '' ||  myPassWD === null ) {
+        alert('沒輸入密碼，請重新輸入!');
+        return;
+      }
+      // 檢查帳號和密碼是否正確，這部分你需要根據你的邏輯來實現
+      if(GroupName != myGroup){
+        alert('帳號錯誤！');
+        return;
+      }
+      if ( passWD === myPassWD ) {
+        // 在這裡添加你想要執行的其他操作，比如彈出提示框等等
+        alert('登入成功，即將跳轉頁面');
+        window.location.href = props.href!;//! 來進行非空斷言
+      } else {
+        alert('密碼錯誤！');
+      }
+    };
+
+    return (
+      <li>
+        <NavigationMenuLink asChild>
+          <a
+            onClick={handleClick} // 設置點擊事件處理程序
+            className={cn(
+              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+              className
+            )}
+            {...props}
+          >
+            <div className="text-sm font-medium leading-none">{title}</div>
+            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+              {children}
+            </p>
+          </a>
+        </NavigationMenuLink>
+      </li>
+    );
+  }
+);
+
 ListItem.displayName = "ListItem";

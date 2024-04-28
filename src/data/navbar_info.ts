@@ -27,8 +27,8 @@ export const groups:Groups[] = [
       href: "https://hackmd.io/@pinky3flavors/S1a3O7K-A",
       description:
         "",
-        GroupName: 'new2',
-        passWD: 'duolingo'
+        GroupName: 'duolingo',
+        passWD: '7777777'
     },
     {
       title: "物聯網小組",
@@ -43,15 +43,15 @@ export const groups:Groups[] = [
       href: "",
       description:
         "",
-        GroupName: 'new4',
-        passWD: '4444'
+        GroupName: '',
+        passWD: ''
     },
     {
       title: "熊熊快樂小組",
-      href: "https://hackmd.io/@LazyBear-1/HkRdm14bR",
+      href: "https://bear-group-for-ncnu.vercel.app/",
       description:
         "",
-        GroupName: 'BHH',
+        GroupName: 'BGFncnu',
         passWD: 'Keep_It_up'
     },
   ];
