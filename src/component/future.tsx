@@ -13,7 +13,17 @@ import { BiTime } from "react-icons/bi";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { FaEarthAmericas } from "react-icons/fa6";
 
-const activities = [
+const activities = [ 
+  {
+    time: "2024/06/14",
+    title: "主題茶會",
+    link: "",
+  },
+  {
+    time: "2024/05/18",
+    title: "微醺程式競賽",
+    link: "",
+  },
   {
     time: "2023/11/xx",
     title: "SQLite 指令教學",

@@ -51,6 +51,10 @@ const announce = [
     people:"Server小組的陳郁芳",
     say:"已經將新加入的成員在我們的ACM2建立帳號~"
   },
+  {
+    people:"Web master",
+    say:"(2024/04/29)右上角'小組活動'那欄將會上鎖~帳號密碼請在加入小組後，找各小組組長~"
+  },
 ];
 export function Announce(Props: Props) {
   return (

@@ -13,7 +13,12 @@ import { BiTime } from "react-icons/bi";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { SparklesIcon } from "lucide-react";
 
-const activities = [
+const activities = [ //備註 : 若時間只剩一週將會移到這邊
+  {
+    time: "2024/04/29",
+    title: "1122 ACM會員大會",
+    link: "", //感覺放簡報連結?? //這個可以之後再要
+  },
   {
     time: "2023/9/27",
     title: "Linux指令教學",

@@ -15,14 +15,6 @@ export interface Remind{
 
 export const groups:Groups[] = [
     {
-      title: "Web小組",
-      href: "https://hackmd.io/@ziling/rJ6JXUnw3",
-      description:
-        "",
-      GroupName: 'web',
-      passWD: '1111'
-    },
-    {
       title: "系統網路小組",
       href: "https://hackmd.io/@ncuyvonne/ServerAndNetwork",
       description:
@@ -31,36 +23,36 @@ export const groups:Groups[] = [
         passWD: 'chmodg+rNCNU'
     },
     {
-      title: "競賽小組",
-      href: "https://hackmd.io/@Yukino9126/rJ28f6ju3",
+      title: "國際學術小組",
+      href: "https://hackmd.io/@pinky3flavors/S1a3O7K-A",
       description:
         "",
-        GroupName: 'contest',
-        passWD: '3333'
+        GroupName: 'new2',
+        passWD: 'duolingo'
+    },
+    {
+      title: "物聯網小組",
+      href: "https://hackmd.io/@Lizta/IoT-0",
+      description:
+        "",
+        GroupName: 'IoT2024',
+        passWD: '1205'
     },
     {
       title: "接案小組",
       href: "",
       description:
         "",
-        GroupName: 'project',
+        GroupName: 'new4',
         passWD: '4444'
     },
     {
-      title: "國際學術組",
-      href: "https://hackmd.io/@y2GeMbPES_WkICCe9gma9w/SJVybzXLh",
+      title: "熊熊快樂小組",
+      href: "https://hackmd.io/@LazyBear-1/HkRdm14bR",
       description:
         "",
-        GroupName: 'international',
-        passWD: '5555'
-    },
-    {
-      title: "網路技術小組",
-      href: "https://hackmd.io/4-bjiy_KTGSd4AoxNimObA?view",
-      description:
-        "",
-        GroupName: 'internat',
-        passWD: '6666'
+        GroupName: 'BHH',
+        passWD: 'Keep_It_up'
     },
   ];
   export const reminds:Remind[] = [
