@@ -17,7 +17,7 @@ const activities = [ //備註 : 若時間只剩一週將會移到這邊
   {
     time: "2024/04/29",
     title: "1122 ACM會員大會",
-    link: "", //感覺放簡報連結?? //這個可以之後再要
+    link: "https://www.canva.com/design/DAGADVPCw8M/cDGWAyg5vfgLhvFFXOZL9w/view", //感覺放簡報連結?? //這個可以之後再要
   },
   {
     time: "2023/9/27",

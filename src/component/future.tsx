@@ -22,7 +22,7 @@ const activities = [
   {
     time: "2024/05/18",
     title: "微醺程式競賽",
-    link: "",
+    link: "https://reurl.cc/bV2jNr",
   },
   {
     time: "2023/11/xx",
