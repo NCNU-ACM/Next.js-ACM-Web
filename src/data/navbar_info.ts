@@ -40,11 +40,11 @@ export const groups:Groups[] = [
     },
     {
       title: "接案小組",
-      href: "",
+      href: "https://hackmd.io/8LrmDQ6JR7aJHDePTFO4Qg",
       description:
         "",
-        GroupName: '',
-        passWD: ''
+        GroupName: 'acm_case',
+        passWD: 'NCNUcsieCase'
     },
     {
       title: "熊熊快樂小組",
