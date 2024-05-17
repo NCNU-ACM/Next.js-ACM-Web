@@ -68,10 +68,8 @@ export function Navbar(NavbarProps:NavbarProps) {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
               </NavigationMenuList>
-            </NavigationMenu>
-            
+            </NavigationMenu>        
            
-        
         </div>
       </header>
     </>

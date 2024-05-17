@@ -20,11 +20,6 @@ const activities = [
     link: "",
   },
   {
-    time: "2024/05/18",
-    title: "微醺程式競賽",
-    link: "https://reurl.cc/bV2jNr",
-  },
-  {
     time: "2023/11/xx",
     title: "SQLite 指令教學",
     link: "https://hackmd.io/@Luise/SyxYxe56T2",
