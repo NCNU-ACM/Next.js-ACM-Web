@@ -24,6 +24,11 @@ const activities = [ //備註 : 若時間只剩一週將會移到這邊
     link: "https://www.canva.com/design/DAGADVPCw8M/cDGWAyg5vfgLhvFFXOZL9w/view", 
   },
   {
+    time: "2024/01/20~01/24",
+    title: "高雄女中Flask營隊",
+    link: "",
+  },
+  {
     time: "2023/9/27",
     title: "Linux指令教學",
     link: "https://hackmd.io/@elliefish/SkQLiEsph",
