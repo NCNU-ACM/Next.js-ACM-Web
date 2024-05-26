@@ -10,6 +10,8 @@ import Pic5 from "../../public/竹女.jpg";
 import Pic6 from "../../public/會員大會.jpg";
 import Pic7 from "../../public/linux指令教學.jpg";
 import Pic8 from "../../public/期初大會.jpg";
+import Pic9 from "../../public/會員大會_20240429.jpg";
+import Pic10 from "../../public/vim交流會_20240518.jpg";
 const photos = [
   {
     pic: Pic1,
@@ -42,6 +44,14 @@ const photos = [
   {
     pic: Pic8,
     text: "期初大會",
+  },
+  {
+    pic: Pic9,
+    text: "2024 會員大會",
+  },
+  {
+    pic: Pic10,
+    text: "vim交流會",
   },
 ];
 interface Props {}

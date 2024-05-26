@@ -17,7 +17,7 @@ const activities = [
   {
     time: "2024/06/14",
     title: "主題茶會",
-    link: "",
+    link: "https://forms.gle/VSwwBaUnaV1tBUSr6",
   },
   {
     time: "2023/11/xx",
