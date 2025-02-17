@@ -16,6 +16,8 @@ import Pic11 from "../../public/112茶會.jpg";
 import Pic12 from "../../public/113興國高中營隊.jpg";
 import Pic13 from "../../public/1131會員大會.jpg";
 import Pic14 from "../../public/1131linux指令教學.jpg";
+import Pic15 from "../../public/1131MPI教學.jpg";
+import Pic16 from "../../public/1131讀書會頒獎.jpg";
 const photos = [
   {
     pic: Pic1,
@@ -72,6 +74,14 @@ const photos = [
   {
     pic: Pic14,
     text: "1131 Linux指令教學",
+  },
+  {
+    pic: Pic15,
+    text: "1131 優良讀書會頒獎",
+  },
+  {
+    pic: Pic16,
+    text: "1131 MPI(平行程式) 教學",
   },
 ];
 interface Props {}

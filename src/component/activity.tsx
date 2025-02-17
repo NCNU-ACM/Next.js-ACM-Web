@@ -15,6 +15,14 @@ import { SparklesIcon } from "lucide-react";
 
 const activities = [ //備註 : 若時間只剩一週將會移到這邊
   {
+    time: "2024/11/20",
+    title: "MPI(平行程式) 教學",
+    link: "", 
+  },{
+    time: "2024/11/07",
+    title: "優良讀書會頒獎典禮",
+    link: "", 
+  },{
     time: "2024/10/14",
     title: "Linux 指令教學",
     link: "", 
@@ -23,11 +31,11 @@ const activities = [ //備註 : 若時間只剩一週將會移到這邊
     title: "期初會員大會",
     link: "https://www.canva.com/design/DAGRwE5GjdU/_qV15Eq3XJwKmuvr_v2f6A/edit?utm_content=DAGRwE5GjdU", 
   },{
-    time: "2024/06/14",
+    time: "2024/07/04~07/07",
     title: "興國高中Python遊戲程式設計營隊",
     link: "", 
   },{
-    time: "2024/",
+    time: "2024/06/14",
     title: "茶會和學長姐經驗分享",
     link: "", 
   },{
