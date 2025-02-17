@@ -12,6 +12,10 @@ import Pic7 from "../../public/linux指令教學.jpg";
 import Pic8 from "../../public/期初大會.jpg";
 import Pic9 from "../../public/會員大會20240429.jpg";
 import Pic10 from "../../public/vim交流會20240518.jpg";
+import Pic11 from "../../public/112茶會.jpg";
+import Pic12 from "../../public/113興國高中營隊.jpg";
+import Pic13 from "../../public/1131會員大會.jpg";
+import Pic14 from "../../public/1131linux指令教學.jpg";
 const photos = [
   {
     pic: Pic1,
@@ -52,6 +56,22 @@ const photos = [
   {
     pic: Pic10,
     text: "vim交流會",
+  },
+  {
+    pic: Pic11,
+    text: "茶會&學長姐修課經驗分享",
+  },
+  {
+    pic: Pic12,
+    text: "興國高中Python遊戲設計營隊",
+  },
+  {
+    pic: Pic13,
+    text: "1131 會員大會",
+  },
+  {
+    pic: Pic14,
+    text: "1131 Linux指令教學",
   },
 ];
 interface Props {}

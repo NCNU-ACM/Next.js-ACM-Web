@@ -15,6 +15,22 @@ import { SparklesIcon } from "lucide-react";
 
 const activities = [ //備註 : 若時間只剩一週將會移到這邊
   {
+    time: "2024/10/14",
+    title: "Linux 指令教學",
+    link: "", 
+  },{
+    time: "2024/10/07",
+    title: "期初會員大會",
+    link: "https://www.canva.com/design/DAGRwE5GjdU/_qV15Eq3XJwKmuvr_v2f6A/edit?utm_content=DAGRwE5GjdU", 
+  },{
+    time: "2024/06/14",
+    title: "興國高中Python遊戲程式設計營隊",
+    link: "", 
+  },{
+    time: "2024/",
+    title: "茶會和學長姐經驗分享",
+    link: "", 
+  },{
     time: "2024/05/18",
     title: "vim交流會",
     link: "", 
