@@ -77,11 +77,11 @@ const photos = [
   },
   {
     pic: Pic15,
-    text: "1131 優良讀書會頒獎",
+    text: "1131 MPI(平行程式) 教學",
   },
   {
     pic: Pic16,
-    text: "1131 MPI(平行程式) 教學",
+    text: "1131 優良讀書會頒獎",
   },
 ];
 interface Props {}
