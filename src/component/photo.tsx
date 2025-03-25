@@ -21,7 +21,7 @@ import Pic16 from "../../public/1131讀書會頒獎.jpg";
 const photos = [
   {
     pic: Pic1,
-    text: "ACM宣傳",
+    text: "ACM 宣傳",
   },
   {
     pic: Pic2,
